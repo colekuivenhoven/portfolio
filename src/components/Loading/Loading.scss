@@ -1,0 +1,11 @@
+@use '../../styles/Global.scss' as *;
+
+.loading {
+    // background-color: lightcoral;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    color: adjust-color($primary-color, $alpha: -0.5);
+}

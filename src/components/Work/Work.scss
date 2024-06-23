@@ -1,0 +1,21 @@
+@use '../../styles/Global.scss' as *;
+
+// * Wrapped content
+// flex-direction: row !important;
+// justify-content: center !important;
+// align-content: flex-start !important;
+// justify-self: flex-start !important;
+// flex-wrap: wrap !important;
+// row-gap: 1rem;
+// gap: 1rem;
+
+$bg-color: #e8ffe8;
+.work {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-content: flex-start !important;
+    justify-self: center !important;
+    flex-wrap: wrap !important;
+    // row-gap: 1rem;
+    // gap: 1rem;
+}

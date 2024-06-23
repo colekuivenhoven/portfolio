@@ -1,0 +1,119 @@
+@use '../../styles/Global.scss' as *;
+
+$nav-menu-height: 3rem;
+$nav-menu-font-size: 0.9rem;
+$nav-menu-underline-thickness: 0.2rem;
+.nav-menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  height: $nav-menu-height;
+  min-height: $nav-menu-height;
+  max-height: $nav-menu-height;
+  background-color: $background-color;
+  z-index: 9999;
+
+  .nav-link-container {
+    position: relative;
+    color: adjust-color($text-color, $alpha: -0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0rem 1rem;
+      text-decoration: none;
+      font-size: $nav-menu-font-size;
+      font-weight: 600;
+      font-style: normal;
+      transition: $primary-transition;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.4rem;
+      width: 80%;
+      border-bottom: $nav-menu-underline-thickness dashed adjust-color($text-color, $alpha: -0.85);
+      pointer-events: none;
+      transition: $primary-transition;
+    }
+
+    &:hover {
+      color: $primary-color;
+      &::after {
+        border-bottom: $nav-menu-underline-thickness solid $primary-color;
+      }
+    }
+
+    &.active {
+      color: $primary-color;
+      background-color: adjust-color($primary-color, $alpha: -0.95);
+      pointer-events: none;
+
+      &::after {
+        border-bottom: $nav-menu-underline-thickness solid $primary-color;
+      }
+    }
+  }
+
+  $logo-text-color: $text-color;
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    height: 100%;
+    
+    .text {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: $logo-text-color;
+      background-color: adjust-color($logo-text-color, $alpha: -0.95);
+      height: 100%;
+      transition: $primary-transition;
+
+      &:hover {
+        color: $primary-color;
+        background-color: adjust-color($primary-color, $alpha: -0.95);
+      }
+
+      svg {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: adjust-color($text-color, $alpha: -0.85);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    justify-content: center;
+
+    .logo {
+      display: none;
+    }
+  }
+}
