@@ -2,6 +2,8 @@
 
 $border-radius: 0.5rem;
 $image-width: 5rem;
+$image-width-mobile: 25vw;
+
 .info-card {
     box-shadow: 0 0 0.5rem rgba($text-color, 0.1);
     border-bottom: 3px solid adjust-color($text-color, $red: 1, $alpha: -0.85);
@@ -16,6 +18,14 @@ $image-width: 5rem;
     min-width: 30rem;
     max-width: 30rem;
     margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-width: 50vw !important;
+        max-width: 50vw !important;
+    }
 
     .info-card-image {
         aspect-ratio: 1;
@@ -33,27 +43,49 @@ $image-width: 5rem;
             max-height: $image-width;
             object-fit: cover;
         }
+
+        @media (max-width: $breakpoint-md) {
+            min-width: $image-width-mobile !important;
+            max-width: $image-width-mobile !important;
+            max-height: $image-width-mobile !important;
+
+            img {
+                max-width: $image-width-mobile !important;
+                max-height: $image-width-mobile !important;
+            }
+        }
     }
     
     .info-card-content {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @media (max-width: $breakpoint-md) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
         .title {
             font-size: 1.2rem;
             font-weight: 700;
             color: $text-color;
-        }
 
-        .date-range {
-            font-size: 0.9rem;
-            font-weight: 300;
-            color: $text-color;
-            margin-bottom: 0.5rem;
+            @media (max-width: $breakpoint-md) {
+                font-size: 1.0rem;
+            }
         }
 
         .description {
+            @media (max-width: $breakpoint-md) {
+                font-size: 0.8rem;
+            }
+        }
 
+        .btn {
+            margin-top: 0.5rem;
         }
     }
 }

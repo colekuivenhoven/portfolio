@@ -1,0 +1,60 @@
+@use '../../styles/Global.scss' as *;
+
+.modal {
+    z-index: 999999 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+
+    .modal-root {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 0.5rem;
+        width: 50vmax;
+        background-color: white;
+        box-shadow: 0 1rem 2rem 0rem rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        outline: 3px dashed adjust-color($primary-color, $alpha: -0.25);
+
+        @media (max-width: $breakpoint-md) {
+            width: 80vw;
+        }
+
+        .modal-header {
+            width: 100%;
+        }
+        .modal-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            row-gap: 0.5rem !important;
+            max-height: 65vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-top: 2px solid adjust-color($text-color, $alpha: -0.9);
+            border-bottom: 2px solid adjust-color($text-color, $alpha: -0.9);
+            width: -moz-available;
+            width: -webkit-fill-available;
+            width: stretch;
+            padding: 0.25rem 0.5rem;
+
+            ul {
+                margin-top: 0rem;
+            }
+        }
+        .modal-footer {
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 100%;
+        }
+    }
+}

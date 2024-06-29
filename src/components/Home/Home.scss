@@ -1,5 +1,123 @@
 @use '../../styles/Global.scss' as *;
 
 .home {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .opening-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        height: 60vh;
+        width: 100%;
+
+        .image-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+
+            img {
+                display: flex;
+                width: 100%;
+                max-width: 20rem;
+                height: auto;
+                border-radius: 1.5rem;
+            }
+        }
+
+        .description-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+
+            .title {
+                font-size: 1.75rem;
+                font-weight: 700;
+                font-style: normal;
+                color: $text-color;
+            
+            }
+
+            .subtext {
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-style: normal;
+                color: adjust-color($text-color, $lightness: 10%);
+            
+            }
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            flex-direction: column;
+            height: auto;
+
+            .image-container {
+                width: 70%;
+                height: 50%;
+                margin-top: 2rem;
+            }
+
+            .description-container {
+                width: 100%;
+                height: 50%;
+                align-items: center;
+                text-align: center;
+
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .subtext {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.5rem;
+        row-gap: 1rem;
+        width: 60%;
+        color: $text-color;
+        padding-bottom: 5rem;
+
+        @media (max-width: $breakpoint-lg) {
+            width: 90%;
+
+            .flex-row {
+                flex-direction: column !important;
+            }
+
+            .flex-col {
+                width: 100% !important;
+            }
+        }
+
+        h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-style: normal;
+            color: adjust-color($text-color, $lightness: 10%);
+        }
+
+        ul {
+            color: adjust-color($text-color, $lightness: 15%);
+            padding: 0 1rem;
+        }
+    }
 }

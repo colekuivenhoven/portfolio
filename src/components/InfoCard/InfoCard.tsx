@@ -1,16 +1,24 @@
 import React, {useState} from "react";
+import AddIcon from '@mui/icons-material/Add';
 
 // Import styles
 import './InfoCard.scss';
+
+// Import Components
+import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 
 // Define the interface for the InfoCard component
 interface InfoCardProps {
   title: string;
   description: string;
+  full_description?: React.ReactNode;
   image: string;
 }
 
 export default (props: InfoCardProps) => {
+  const [moreInfoOpen, setMoreInfoOpen] = useState(false);
+
   return (
     <>
       <div className="info-card">
@@ -20,8 +28,21 @@ export default (props: InfoCardProps) => {
         <div className="info-card-content">
           <span className="title">{props.title}</span>
           <span className="description">{props.description}</span>
+          <Button 
+            label="More Details" 
+            onClick={() => setMoreInfoOpen(true)}
+            variant="text" 
+            size="small" 
+            type="secondary"
+          />
         </div>
       </div>
+      <Modal 
+        title={props.title} 
+        content={props.full_description} 
+        open={moreInfoOpen} 
+        onClose={() => setMoreInfoOpen(false)}
+      />
     </>
   );
 }

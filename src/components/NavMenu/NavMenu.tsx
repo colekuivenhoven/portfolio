@@ -17,9 +17,9 @@ export default () => {
         </span>
 
         {/* About */}
-        <span className={`nav-link-container ${window.location.pathname === "/about" ? "active" : ""}`}>
+        {/* <span className={`nav-link-container ${window.location.pathname === "/about" ? "active" : ""}`}>
           <a href="/about">About Me</a>
-        </span>
+        </span> */}
 
         {/* Projects */}
         <span className={`nav-link-container ${window.location.pathname === "/projects" ? "active" : ""}`}>
@@ -38,7 +38,7 @@ export default () => {
             placement="bottom" 
             arrow
           >
-          <a className="text" href="/about"><AccountCircleIcon/>&nbsp;Cole Kuivenhoven</a>
+          <a className="text" href="/about"><AccountCircleIcon/>&nbsp;<span className="name">Cole Kuivenhoven</span></a>
           </Tooltip>
         </span>
       </div>

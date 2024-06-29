@@ -1,0 +1,29 @@
+@use '../../styles/Global.scss' as *;
+
+.btn {
+    width: max-content;
+    text-transform: none !important;
+    position: relative;
+
+    &.primary {
+        border-radius: 0.35rem !important;
+    }
+
+    &.secondary {
+        border-radius: 0.35rem 0.35rem 0 0 !important;
+        background-color: transparent !important;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px dashed $primary-color;
+        }
+
+        &:hover::after {
+            border-bottom: 2px solid $primary-color;
+        }
+    }
+}

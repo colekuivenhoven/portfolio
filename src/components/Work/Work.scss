@@ -1,14 +1,5 @@
 @use '../../styles/Global.scss' as *;
 
-// * Wrapped content
-// flex-direction: row !important;
-// justify-content: center !important;
-// align-content: flex-start !important;
-// justify-self: flex-start !important;
-// flex-wrap: wrap !important;
-// row-gap: 1rem;
-// gap: 1rem;
-
 $bg-color: #e8ffe8;
 .work {
     flex-direction: row !important;
@@ -16,6 +7,28 @@ $bg-color: #e8ffe8;
     align-content: flex-start !important;
     justify-self: center !important;
     flex-wrap: wrap !important;
-    // row-gap: 1rem;
-    // gap: 1rem;
+
+    .MuiTimeline-root {
+        padding: 0 !important;
+
+        .MuiTimelineOppositeContent-root {
+            font-size: 0.9rem !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 0.5rem;
+
+            @media (max-width: $breakpoint-md) {
+                padding: 0.25rem !important;
+                padding-top: 0.5rem !important;
+            }
+            
+            span {
+                color: $text-color;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
 }

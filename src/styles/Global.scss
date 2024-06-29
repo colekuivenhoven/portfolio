@@ -25,3 +25,175 @@ $breakpoint-xl: 1200px;
     flex: 1;
     padding-top: 1rem;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    list-style-type: circle;
+}
+
+// Flexbox
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+// Width
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-66 {
+    width: 66.66%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-33 {
+    width: 33.33%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+// Gap
+.g-1 {
+    gap: 0.25rem;
+}
+
+.g-2 {
+    gap: 0.5rem;
+}
+
+.g-3 {
+    gap: 1rem;
+}
+
+.g-4 {
+    gap: 2rem;
+}
+
+
+// Row Gap
+.rg-1 {
+    row-gap: 0.25rem;
+}
+
+.rg-2 {
+    row-gap: 0.5rem;
+}
+
+.rg-3 {
+    row-gap: 1rem;
+}
+
+.rg-4 {
+    row-gap: 2rem;
+}
+
+//Tables
+$table-border-radius: 0.25rem;
+table {
+    table-layout: fixed;
+    border: 1px solid adjust-color($text-color, $alpha: -0.65);
+    border-radius: $table-border-radius;
+    padding: 0.25rem;
+
+    thead {
+        position: relative;
+        
+        th {
+            padding: 0.25rem 0.5rem;
+            padding-bottom: 0.25rem;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.9rem;
+            color: adjust-color($text-color, $lightness: 15%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            background-color: adjust-color($primary-color, $alpha: -0.85);
+            border-bottom: 1px solid adjust-color($text-color, $lightness: 15%);
+            border-radius: $table-border-radius $table-border-radius 0 0;
+        }
+    }
+
+    tr {
+        td {
+            vertical-align: top;
+            padding: 0.25rem;
+            text-align: left;
+            color: adjust-color($text-color, $lightness: 15%);
+            position: relative;
+
+            &:not(:first-child) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0.25rem;
+                    left: -0.5rem;
+                    bottom: 0.25rem;
+                    width: 1px;
+                    background-color: adjust-color($text-color, $alpha: -0.75);
+                }
+            }
+        }
+    }
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #AAAAAA;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: $primary-color;
+}
