@@ -18,7 +18,7 @@ export default () => {
 
           <Box className="opening-container g-3">
             <Box className="image-container">
-              <img src="./profile_pic_1.jpg" alt="Cole Kuivenhoven" />
+              <img src="./profile_pic_2.png" alt="Cole Kuivenhoven" />
             </Box>
             <Box className="description-container">
               <div className="title">Cole Kuivenhoven</div>
