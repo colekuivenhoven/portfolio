@@ -12,13 +12,14 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   icon?: React.ReactNode;
   type?: "primary" | "secondary";
+  theme?: "light" | "dark";
 }
 
 export default (props: ButtonProps) => {
   return (
     <>
       <Button 
-        className={`btn ${props.type}`}
+        className={`btn ${props.type} ${props.theme}`}
         onClick={props.onClick} 
         variant={props.variant}
         size={props.size}

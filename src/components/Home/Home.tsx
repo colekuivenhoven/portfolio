@@ -14,39 +14,48 @@ export default () => {
   return (
     <>
       <div className="page-content home">
-        <div className="text-container">
+        <Box className="opening-container g-3">
 
-          <Box className="opening-container g-3">
-            <Box className="image-container">
-              <img src="./profile_pic_2.png" alt="Cole Kuivenhoven" />
-            </Box>
-            <Box className="description-container">
-              <div className="title">Cole Kuivenhoven</div>
-              <div className="subtext">A Full-Stack Developer</div>
-              <div className="subtext">
-                <Button 
-                  label="See My Projects" 
-                  onClick={() => window.location.href = "/projects"} 
-                  variant="text" 
-                  size="medium" 
-                  type="secondary"
-                />
-                <Button 
-                  label="Contact Me" 
-                  onClick={() => setContactInfoOpen(true)}
-                  variant="text" 
-                  size="medium" 
-                  type="secondary"
-                />
-              </div>
-            </Box>
+          {/* Image */}
+          <Box className="image-container">
+            <img src="./profile_pic_2.png" alt="Cole Kuivenhoven" />
           </Box>
 
+          {/* Description */}
+          <Box className="description-container">
+            <div className="title">Cole Kuivenhoven</div>
+            <div className="subtext">A Full-Stack Developer</div>
+            <div className="actions">
+              <Button 
+                label="See My Projects" 
+                onClick={() => window.location.href = "/projects"} 
+                variant="text" 
+                size="medium" 
+                type="secondary"
+                theme="dark"
+              />
+              <Button 
+                label="Contact Me" 
+                onClick={() => setContactInfoOpen(true)}
+                variant="text" 
+                size="medium" 
+                type="secondary"
+                theme="dark"
+              />
+            </div>
+          </Box>
+        </Box>
+
+        <div className="text-container">
           <Box className="flex-col rg-1">
-            <h3>About Me</h3>
-            <span>
+            <h3>My Experience at a Glance</h3>
+            {/* <span>
               I've worked as a lead developer on full-stack applications in multiple capacities, as well as followed 
               agile project management methodologies while building these applications.
+            </span> */}
+            <span>
+              We all have busy schedules, and you might not have time to read through my entire portfolio, so 
+              below I've provided a brief overview of my various competencies in both front-end and back-end technologies.
             </span>
           </Box>
 
@@ -54,8 +63,8 @@ export default () => {
             <Box className="flex-col w-100">
               <table>
                 <thead>
-                  <th>Front-end</th>
-                  <th>Back-end</th>
+                  <th>Front-End Experience</th>
+                  <th>Back-End Experience</th>
                 </thead>
                 <tr>
 
@@ -87,7 +96,7 @@ export default () => {
               </table>
             </Box>
 
-            <Box className="flex-col w-100">
+            {/* <Box className="flex-col w-100">
               <h4>Here are a few well-known APIs I've worked with: </h4>
               <ul>
                 <li>Google Maps API</li>
@@ -97,9 +106,9 @@ export default () => {
                 <li>SQL databases like MySQL and MSSQL</li>
                 <li>...and of course, linux environments!</li>
               </ul>
-            </Box>
+            </Box> */}
 
-            <Box className="flex-col w-100">
+            {/* <Box className="flex-col w-100">
               <h4>I also have experience: </h4>
               <ul>
                 <li>Deploying applications using Bitbucket and AWS Amplify.</li>
@@ -109,16 +118,16 @@ export default () => {
                 <li>SQL databases like MySQL and MSSQL</li>
                 <li>...and of course, linux environments!</li>
               </ul>
-            </Box>
+            </Box> */}
           </Box>
 
-          <Box className="flex-col rg-1">
+          {/* <Box className="flex-col rg-1">
             <span>
             I also have experience deploying these types of applications through AWS Amplify, Lightsail, and Route53. 
             On top of that, I've used many more of the AWS services to support applications I've built such as AWS 
             SQS and SNS.
             </span>
-          </Box>
+          </Box> */}
         </div>
       </div>
 

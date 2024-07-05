@@ -1,5 +1,7 @@
 @use '../../styles/Global.scss' as *;
 
+$dark-color: rgb(255, 255, 255);
+$dark-color-hover: rgb(255, 182, 92);
 .btn {
     width: max-content;
     text-transform: none !important;
@@ -24,6 +26,27 @@
 
         &:hover::after {
             border-bottom: 2px solid $primary-color;
+        }
+
+        &.dark {
+            color: $dark-color;
+
+            &:hover {
+                color: adjust-color($dark-color-hover, $lightness: 20%);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 2px dashed $dark-color-hover;
+            }
+    
+            &:hover::after {
+                border-bottom: 2px solid $dark-color-hover;
+            }
         }
     }
 }
