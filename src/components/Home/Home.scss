@@ -206,8 +206,15 @@ $content-width: 60%;
                 font-size: 1.2rem;
             }
 
-            li {
-                font-size: 1.1rem !important;
+            ul {
+                list-style: none;
+                padding: 0 !important;
+                display: inline-flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                li {
+                    font-size: 1.1rem !important;
+                }
             }
         }
 

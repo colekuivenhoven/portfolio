@@ -129,9 +129,7 @@ ul {
 $table-border-radius: 0.25rem;
 table {
     table-layout: fixed;
-    border: 1px solid adjust-color($text-color, $alpha: -0.65);
-    border-radius: $table-border-radius;
-    padding: 0.25rem;
+    padding: 0;
 
     thead {
         position: relative;
@@ -170,18 +168,6 @@ table {
             text-align: left;
             color: adjust-color($text-color, $lightness: 15%);
             position: relative;
-
-            &:not(:first-child) {
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0.25rem;
-                    left: -0.5rem;
-                    bottom: 0.25rem;
-                    width: 1px;
-                    background-color: adjust-color($text-color, $alpha: -0.75);
-                }
-            }
         }
     }
 }
