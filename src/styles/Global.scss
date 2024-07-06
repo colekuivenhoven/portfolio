@@ -125,53 +125,6 @@ ul {
     row-gap: 2rem;
 }
 
-//Tables
-$table-border-radius: 0.25rem;
-table {
-    table-layout: fixed;
-    padding: 0;
-
-    thead {
-        position: relative;
-        
-        th {
-            padding: 0.25rem 0.5rem;
-            padding-bottom: 0.25rem;
-            text-align: left;
-            vertical-align: top;
-            font-size: 0.9rem;
-            //color: adjust-color($text-color, $lightness: 15%);
-            color: $primary-color;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            top: 0;
-            right: 0;
-            //background-color: adjust-color($primary-color, $alpha: -0.85);
-            background-color: adjust-color($primary-color, $alpha: -0.8);
-            //border-bottom: 1px solid adjust-color($text-color, $alpha: -0.75);
-            //border-radius: $table-border-radius $table-border-radius 0 0;
-            border-radius: $table-border-radius;
-            z-index: -1;
-        }
-    }
-
-    tr {
-        td {
-            vertical-align: top;
-            padding: 0.25rem;
-            padding-left: 0.5rem;
-            text-align: left;
-            color: adjust-color($text-color, $lightness: 15%);
-            position: relative;
-        }
-    }
-}
-
 // Scrollbar Styling
 ::-webkit-scrollbar {
     width: 14px;

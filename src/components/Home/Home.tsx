@@ -58,6 +58,7 @@ export default () => {
               below I've provided a brief overview of my various competencies in both front-end and back-end technologies.
             </span>
           </Box>
+          <br/>
 
           <Box className="flex-col g-3 w-100">
             <Box className="flex-col w-100">
@@ -95,39 +96,7 @@ export default () => {
                 </tr>
               </table>
             </Box>
-
-            {/* <Box className="flex-col w-100">
-              <h4>Here are a few well-known APIs I've worked with: </h4>
-              <ul>
-                <li>Google Maps API</li>
-                <li>OpenAI API</li>
-                <li>Python</li>
-                <li>NoSQL databases like MongoDB</li>
-                <li>SQL databases like MySQL and MSSQL</li>
-                <li>...and of course, linux environments!</li>
-              </ul>
-            </Box> */}
-
-            {/* <Box className="flex-col w-100">
-              <h4>I also have experience: </h4>
-              <ul>
-                <li>Deploying applications using Bitbucket and AWS Amplify.</li>
-                <li>Express</li>
-                <li>Python</li>
-                <li>NoSQL databases like MongoDB</li>
-                <li>SQL databases like MySQL and MSSQL</li>
-                <li>...and of course, linux environments!</li>
-              </ul>
-            </Box> */}
           </Box>
-
-          {/* <Box className="flex-col rg-1">
-            <span>
-            I also have experience deploying these types of applications through AWS Amplify, Lightsail, and Route53. 
-            On top of that, I've used many more of the AWS services to support applications I've built such as AWS 
-            SQS and SNS.
-            </span>
-          </Box> */}
         </div>
       </div>
 
