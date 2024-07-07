@@ -62,11 +62,16 @@ export default () => {
     },
   ]);
   return (
-    <div className="App">
-      <NavMenu />
-      {loading ? <Loading /> : null}
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <div className="App">
+        <NavMenu />
+        {loading ? <Loading /> : null}
+        <RouterProvider router={router} />
+        <div className="copyright">
+          <span>&copy; {new Date().getFullYear()} Cole Kuivenhoven</span>
+        </div>
+      </div>
+    </>
   );
 }
 

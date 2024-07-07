@@ -14,6 +14,7 @@ interface InfoCardProps {
   description: string;
   full_description?: React.ReactNode;
   image: string;
+  tags?: string[];
 }
 
 export default (props: InfoCardProps) => {
@@ -28,6 +29,13 @@ export default (props: InfoCardProps) => {
         <div className="info-card-content">
           <span className="title">{props.title}</span>
           <span className="description">{props.description}</span>
+          {props.tags && (
+            <div className="tags">
+              {props.tags.map((tag, index) => (
+                <span className="tag" key={"tags_"+index}>{tag}</span>
+              ))}
+            </div>
+          )}
           <Button 
             label="More Details" 
             onClick={() => setMoreInfoOpen(true)}

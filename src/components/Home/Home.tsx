@@ -64,33 +64,47 @@ export default () => {
             <Box className="flex-col w-100">
               <table>
                 <thead>
-                  <th>Front-End Experience</th>
-                  <th>Back-End Experience</th>
+                  <th>Languages</th>
+                  <th>Front-End</th>
+                  <th>Back-End</th>
                 </thead>
                 <tr>
 
-                  {/* Front-end */}
-                  <td className="w-50">
+                  {/* Languages */}
+                  <td className="w-33">
                     <ul>
-                      <li>React and React Native</li>
+                      <li>Javascript/Typescript</li>
+                      <li>Python</li>
+                      <li>Java</li>
+                      <li>C#</li>
+                      <li>HTML5 + CSS3</li>
+                    </ul>
+                  </td>
+
+                  {/* Front-end */}
+                  <td className="w-33">
+                    <ul>
+                      <li>React</li>
+                      <li>React Native</li>
                       <li>Angular</li>
-                      <li>Material UI and Bootstrap</li>
                       <li>Vue</li>
                       <li>Django</li>
-                      <li>Typescript</li>
-                      <li>HTML5 and CSS3</li>
+                      <li>Material UI</li>
+                      <li>Bootstrap</li>
+                      <li>SASS</li>
                     </ul>
                   </td>
 
                   {/* Back-end */}
-                  <td className="w-50">
+                  <td className="w-33">
                     <ul>
-                      <li>Node.js</li>
+                      <li>Node</li>
                       <li>Express</li>
-                      <li>Python</li>
-                      <li>NoSQL databases like MongoDB</li>
-                      <li>SQL databases like MySQL and MSSQL</li>
-                      <li>...and of course, linux environments!</li>
+                      <li>MongoDB</li>
+                      <li>MySQL</li>
+                      <li>MSSQL</li>
+                      <li>NGINX</li>
+                      <li>AWS</li>
                     </ul>
                   </td>
                 </tr>

@@ -1,5 +1,15 @@
 @use '../../styles/Global.scss' as *;
 
 .projects {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-content: center !important;
+    justify-self: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem;
+    row-gap: 1rem;
 
+    .info-card {
+        margin-bottom: 0 !important;
+    }
 }

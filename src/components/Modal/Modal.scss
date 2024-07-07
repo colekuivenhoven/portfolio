@@ -48,6 +48,22 @@
             ul {
                 margin-top: 0rem;
             }
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.25rem;
+                row-gap: 0.25rem;
+                margin-top: 0.5rem;
+                font-size: 0.8rem;
+        
+                .tag {
+                    color: $primary-color;
+                    background-color: adjust-color($primary-color, $alpha: -0.9);
+                    padding: 0.125rem 0.5rem;
+                    border-radius: 0.25rem;
+                }
+            }
         }
         .modal-footer {
             margin-top: 0.5rem;
